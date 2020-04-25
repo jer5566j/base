@@ -1,0 +1,26 @@
+app:
+  debug: false
+  root_path: ./
+
+DB:
+  dsn: name:password@tcp(host:port)/database?charset=utf8mb4
+  type: mysql
+  max_open_connect: 20
+  max_idle_connect: 2
+  table_prefix:
+
+http:
+  ip: 0.0.0.0
+  port: 80
+  host: http://127.0.0.1
+  pic_host: http://127.0.0.1
+
+token:
+  secret: token_secret
+  expire: 86400
+
+wechat:
+  app_id: appid
+  secret: secret
+  api:
+    code_to_session: https://api.weixin.qq.com/sns/jscode2session?appid={appid}&secret={secret}&js_code={code}&grant_type=authorization_code
